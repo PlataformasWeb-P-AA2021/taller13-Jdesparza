@@ -1,0 +1,14 @@
+{% extends "master.html" %}
+
+{% block content %}
+<div class="contenedorForm">
+  <h2 class="addDept">Editar Edificio</h3>
+
+    <form action="" method="post" class="estilosForm">
+      {% csrf_token %}
+      {{formulario.as_p}}
+      <p class="boton"><input type='submit' value='Actualizar'/></p>
+    </form>
+</div>
+
+{% endblock %}

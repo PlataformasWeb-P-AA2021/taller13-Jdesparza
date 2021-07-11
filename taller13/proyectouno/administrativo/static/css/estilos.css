@@ -1,0 +1,157 @@
+/* manejo de las características de la etiqueta body*/
+
+body {
+  /*background: #FEFEFD;*/
+  background: #bee2e2;
+  padding: 30px;
+
+}
+
+header {
+  background: #034275;
+  color: #FFF;
+}
+/* manejo de las características de la etiqueta table*/
+
+section {
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid black;
+}
+.estiloshovertr:hover {
+  background-color: #acd5e2;
+}
+tr:hover {
+  background-color: #258EAD;
+}
+
+label {
+  padding: 12px 10px;
+}
+/* manejo de las características de las clases*/
+
+.colorceldsprintfa{
+  background: #9999FF;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.miformulario{
+  width: 100%;
+}
+
+.errorlist li {
+  color: red;
+}
+
+/*Menu */
+/*
+ Tomado de http://codigoprogramacion.com/cursos/html/como-hacer-un-menu-horizontal-con-html5-y-css3.html
+ */
+.top_menu ul
+{
+  list-style:none;
+  float:left;
+  padding: 5px;
+  width: 100%;
+  height: 49px;
+  background-color: #bee2e2;
+  justify-content: center;
+  display: inline-flex;
+}
+
+.top_menu ul li
+{
+  float:left;
+  margin-right:10px;
+  margin-bottom:5px;
+  text: #FFF;
+
+}
+
+footer{
+  background: #8db4b4;
+  color: black;
+  width: 100%;
+  justify-content: center;
+  display: inline-flex;
+  margin-top: 1.5em;
+}
+footer > p {
+  margin-inline-end: 5em;
+}
+
+.wrapper-dos-columnas {
+  margin: 15px;
+  background-color: red;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+}
+
+.izquierda-column {
+  background-color: #FFF;
+  height: 200px;
+}
+
+.derecha-column {
+  background-color: #FFF;
+  height: 200px;
+}
+
+/* fin dos columnas*/
+.fieldWrapperFila {
+  display: inline-block;
+}
+.titulo {
+  display: inline-block;
+  padding-inline: 7em;
+}
+.addDept {
+  text-align: center;
+  margin-bottom: 2em;
+}
+.estilosForm {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+}
+.tituloPagina {
+  padding: 1em;
+}
+.boton {
+  text-align: center;
+  margin-top: 2em;
+}
+.boton > input {
+  padding: 0.5em 1em;
+}
+.navOpciones {
+  margin-inline: 2em;
+}
+input {
+  border-radius: 5px;
+  border: 1px solid black;
+}
+input:focus {
+  outline: none;
+}
+.bienvenida {
+  color: #000000;
+}

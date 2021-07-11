@@ -1,0 +1,13 @@
+{% extends "master.html" %}
+
+{% block content %}
+
+<h3>Departamento</h3>
+
+<p><b>Propietario: </b>{{departamento.nombPropietario}}</p>
+<p><b>Costo: </b>{{departamento.costoDept}}</p>
+<p><b>Cuartos: </b>{{departamento.cuartos}}</p>
+<p><b>Edificio: </b>{{departamento.edificio.nombre}}</p>
+
+<br/>
+{% endblock %}

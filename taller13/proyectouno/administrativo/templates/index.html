@@ -1,0 +1,70 @@
+{% extends "master.html" %}
+
+{% block title %}
+  Listado de Edificios
+{% endblock %}
+
+{% block content %}
+<h3>Número de edificios {{ numero_edificio }}</h3>
+
+<table id="tabla_datos">
+
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Dirección</th>
+      <th>Ciudad</th>
+      <th>Tipo</th>
+      <th>Departamentos</th>
+      <th>Opciones</th>
+    </tr>
+  </thead>
+
+  {% for e in edificio %}
+  <tr class="estiloshovertr">
+    <td> {{e.nombre}} {{e.apellido}}</td>
+    <td> {{e.direccion}}</td>
+    <td> {{e.ciudad}}</td>
+    <td> {{e.tipo}}</td>
+    <td>
+      <ul>
+        {% for t in e.departamentos.all %}
+          <li>
+            <span>
+              <b>
+                Propietario:
+              </b> {{t.nombPropietario}} 
+              <b>
+                Costo
+              </b> {{t.costoDept}} 
+              <b>
+                Total Cuartos:
+              </b> {{t.cuartos}} 
+              - [<a href="{% url 'obtener_departamento' t.id %}">ver</a>]
+              - [<a href="{% url 'editar_departamento' t.id %}">editar</a>] </span>
+              - [<a href="{% url 'eliminar_departamento' t.id %}"
+                onclick="return confirm('¿Está seguro de la eliminación?')">eliminar</a>] </span>
+          </li>
+        {% endfor %}
+      </ul>
+        <span><b>Total de Cuartos:</b> {{ e.obtener_total_cuartos }}</span><br>
+        <span><b>Costo Total Departamentos:</b> {{ e.obtener_costo_total_departamentos }}</span><br>
+        <br>[<a href="{% url 'crear_departamento_edificio' e.id%}">+Departamento</a>]
+    </td>
+    <td> <a href="{% url 'obtener_edificio' e.id %}">ver</a> <br>
+      <a href="{% url 'editar_edificio' e.id %}">editar</a> <br>
+      <a href="{% url 'eliminar_edificio' e.id %}"
+      onclick="return confirm('¿Está seguro de la eliminación?')" >
+      eliminar</a>
+    </td>
+
+  </tr>
+  {% endfor %}
+</table>
+
+<script type="text/javascript">
+  $(document).ready( function () {
+    $('#tabla_datos').DataTable();
+  });
+</script>
+{% endblock %}
